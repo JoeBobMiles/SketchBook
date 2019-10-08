@@ -1,3 +1,9 @@
+// @file serve.ts
+// @author Joseph Miles <josephmiles2015@gmail.com>
+// @date 2019-10-06
+//
+// This file is our test server, used to perform local testing of our WebGL.
+
 import * as http from "http";
 import * as filesystem from "fs";
 
