@@ -4,11 +4,11 @@
 //
 // This file is our test server, used to perform local testing of our WebGL.
 
-import * as http from "http";
 import * as filesystem from "fs";
+import * as http from "http";
 
 
-const ROOT_DIR = "./build";
+const ROOT_DIR = "./public";
 
 
 const server = http.createServer();
@@ -21,10 +21,10 @@ server.on("request", (request, response) => {
         "Content-Type": "text/html"
     });
 
-    let url = request.url == "/" ? "index.html" : request.url;
+    const url = request.url === "/" ? "/index.html" : request.url;
 
-    filesystem.readFile(`${ROOT_DIR}/${url}`, (error, data) => {
-        if (error && error.code != "ENOENT")
+    filesystem.readFile(`${ROOT_DIR}${url}`, (error, data) => {
+        if (error && error.code !== "ENOENT")
             console.error(error);
 
         else
@@ -33,4 +33,4 @@ server.on("request", (request, response) => {
 });
 
 
-server.listen(8000);
+server.listen(80);
