@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc src\\serve.ts --outDir build\\",
+    "build": "tsc src\\serve.ts src\\new_sketch.ts --outDir build\\",
     "serve": "node build\\serve.js",
-    "build-n-serve": "npm run build && npm run serve"
+    "build-n-serve": "npm run build && npm run serve",
+    "new": "node build\\new_sketch.js"
   },
   "keywords": [],
   "author": "",

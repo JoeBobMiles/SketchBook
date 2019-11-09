@@ -1,5 +1,5 @@
 // @file serve.ts
-// @author Joseph Miles <me@josephrmiles.com>
+// @author Joseph R Miles <me@josephrmiles.com>
 // @date 2019-10-06
 //
 // This file is our test server, used to perform local testing of our WebGL.
